@@ -1,0 +1,115 @@
+#div1{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    border: 5px solid black;
+    /* transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function:ease-in(5);  
+    transition-delay: 1s; */
+    /* /* in one line   */
+    transition: all 1s ease-in 0.5s;
+}
+#div1:hover
+{
+    background-color: aqua;
+     color: white;
+     transition-property:all;
+
+}
+#div1:active
+{
+    background-color: magenta;
+}
+#div2
+{
+    width: 100px;
+    height: 100px;
+    margin-left: 190px;
+    background-color: chartreuse;
+    /* rotate :70deg ;
+    transform: scale(2);
+    /* for x and y axis use below one  */
+    /* transform: scale(3,1); */ 
+    transition: all 1s ease-in;
+}
+#div2:hover{
+rotate: 90deg;
+    transform: scale(2);
+    /* for x and y axis use below one  */
+    transform: scale(3, 3);
+    /* skew help to strrached a box form two corners  */
+    transform: skew(130deg);
+}
+#animate
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: gold;
+    position: absolute;
+    animation-name:myanimation;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+@keyframes myanimation
+{
+    from{background-color: gold;}
+    to { background-color: red;}
+    from{left: 0px;}
+    to{left: 910px;}
+}
+#animate2{
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
+    background-color: gold;
+    position: absolute;
+    animation-name: myanimation2;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+/* we can also use % for animation see below */
+@keyframes myanimation2{
+    0% {
+        background-color: rgb(213, 0, 135);
+    }
+  50%
+  {
+    background-color: aqua;
+  }
+    100% {
+        background-color: rgb(72, 255, 0);
+    }
+
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 910px;
+    }
+}
+@media(max-width:400px)
+{
+    div 
+    {
+        background-color: rgb(255, 221, 0);
+    }
+}
+@media(min-width:500px) 
+{
+    div
+    {
+        background-color: red;
+    }
+
+}@media(min-width:0px) and (max-width:100px) {
+    div {
+        background-color: rgb(21, 0, 255);
+    }
+}
